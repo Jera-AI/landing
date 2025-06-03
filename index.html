@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InvoiceOff</title>
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Si quieres personalizar Tailwind, podrías añadir un bloque de configuración aquí -->
+</head>
+
+<body class="bg-gray-50">
+
+  <main class="min-h-screen overflow-hidden">
+
+    <!-- Hero Section -->
+    <section class="relative flex min-h-[90vh] items-center bg-[#0B2C4D] px-4 text-white">
+      <!-- Círculos decorativos -->
+      <div class="absolute inset-0 overflow-hidden">
+        <div class="absolute -left-40 -top-40 h-80 w-80 rounded-full bg-blue-400/10"></div>
+        <div class="absolute -right-20 top-1/2 h-60 w-60 rounded-full bg-blue-400/10"></div>
+        <div class="absolute bottom-20 left-1/3 h-40 w-40 rounded-full bg-blue-400/10"></div>
+      </div>
+      <!-- Imagen de fondo semitransparente -->
+      <div class="absolute inset-0 overflow-hidden opacity-40">
+      </div>
+
+      <div class="container mx-auto grid max-w-6xl gap-8 md:grid-cols-2 relative z-10">
+        <!-- Logo y texto -->
+        <div class="flex flex-col items-center justify-center text-center md:items-start md:text-left">
+          <div class="mb-1">
+            <img src="images/logo_incoiveoff.png" width="300" height="100" alt="InvoiceOff Logo"
+              class="mx-auto md:mx-0" />
+          </div>
+          <p class="text-xl">
+            Gestiona les teves factures de manera intel·ligent i eficient
+          </p>
+        </div>
+        <!-- Formulario de contacto -->
+        <div class="hidden md:block">
+          <!-- Aquí sustituimos el componente ContactForm de React por un formulario estático -->
+          <form action="#" method="POST" class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="mb-4 text-2xl font-semibold text-[#0B2C4D] text-center">Contacta’ns</h3>
+            <div class="mb-4">
+              <label for="name" class="block text-gray-700 mb-2">Nom</label>
+              <input type="text" id="name" name="name" required
+                class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#0B2C4D]" />
+            </div>
+            <div class="mb-4">
+              <label for="email" class="block text-gray-700 mb-2">Correu electrònic</label>
+              <input type="email" id="email" name="email" required
+                class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#0B2C4D]" />
+            </div>
+            <div class="mb-4">
+              <label for="message" class="block text-gray-700 mb-2">Missatge</label>
+              <textarea id="message" name="message" rows="4" required
+                class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#0B2C4D]"></textarea>
+            </div>
+            <button type="submit"
+              class="w-full bg-[#0B2C4D] text-white py-2 rounded hover:bg-[#0B2C4D]/90 transition-colors">
+              Enviar
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- App Preview Section -->
+    <section class="relative overflow-hidden bg-[#F5F5F5] min-h-screen flex items-center">
+      <div class="container mx-auto max-w-5xl px-4">
+        <div class="grid items-center gap-12 md:grid-cols-2">
+          <!-- Texto descriptivo y botones -->
+          <div class="max-w-sm">
+            <h2 class="mb-6 text-3xl font-bold text-[#0B2C4D]">
+              Gestiona les teves factures de forma fàcil
+            </h2>
+            <p class="mb-8 text-lg text-gray-600">
+              Deixa que la intel·ligència artificial processi les teves factures automàticament. Puja-les i nosaltres
+              ens encarreguem de la resta.
+            </p>
+            <div class="flex gap-4">
+              <button class="bg-[#0B2C4D] text-white px-4 py-2 rounded hover:bg-[#0B2C4D]/90 transition-colors">
+                App Store
+              </button>
+              <button class="bg-[#0B2C4D] text-white px-4 py-2 rounded hover:bg-[#0B2C4D]/90 transition-colors">
+                Google Play
+              </button>
+            </div>
+          </div>
+          <!-- Imagen de la app -->
+          <div class="relative h-[90vh] flex items-center justify-center overflow-hidden">
+            <div class="relative z-10 scale-125 transform">
+              <img src="images/app-preview.png" width="400" height="800" alt="InvoiceOff App" class="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Característiques principals -->
+    <section class="py-20 bg-[#0B2C4D]">
+      <div class="container mx-auto max-w-6xl px-4">
+        <h2 class="mb-12 text-center text-3xl font-bold text-white">
+          Característiques principals
+        </h2>
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <!-- Tarjeta 1 -->
+          <div class="p-6 transition-transform duration-300 hover:scale-105 cursor-pointer bg-white rounded-lg shadow">
+            <h3 class="mb-4 text-xl font-semibold text-[#0B2C4D]">Càrrega fàcil</h3>
+            <p class="text-gray-600">
+              Carrega les teves factures amb un simple clic i deixa que INVOICEOFF faci la resta
+            </p>
+          </div>
+          <!-- Tarjeta 2 -->
+          <div class="p-6 transition-transform duration-300 hover:scale-105 cursor-pointer bg-white rounded-lg shadow">
+            <h3 class="mb-4 text-xl font-semibold text-[#0B2C4D]">Extracció automàtica</h3>
+            <p class="text-gray-600">
+              Reconeixement automàtic de dades de les factures sense necessitat d'entrada manual
+            </p>
+          </div>
+          <!-- Tarjeta 3 -->
+          <div class="p-6 transition-transform duration-300 hover:scale-105 cursor-pointer bg-white rounded-lg shadow">
+            <h3 class="mb-4 text-xl font-semibold text-[#0B2C4D]">Organització intel·ligent</h3>
+            <p class="text-gray-600">
+              Classificació automàtica entre despeses i ingressos per a una millor gestió
+            </p>
+          </div>
+          <!-- Tarjeta 4 -->
+          <div class="p-6 transition-transform duration-300 hover:scale-105 cursor-pointer bg-white rounded-lg shadow">
+            <h3 class="mb-4 text-xl font-semibold text-[#0B2C4D]">Exportació a Excel</h3>
+            <p class="text-gray-600">
+              Exporta totes les dades a Excel de forma organitzada i estructurada
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Per a qui és INVOICEOFF? -->
+    <section class="relative overflow-hidden bg-gray-100 py-20">
+      <!-- Fondo de oficina con degradado -->
+      <div class="absolute inset-0">
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-b from-gray-100/50 to-gray-100/90"></div>
+      <div class="absolute inset-0 opacity-[0.0025]">
+        <img src="images/office-bg.png" alt="Office background" class="object-cover w-full h-full" />
+      </div>
+
+      <div class="container relative mx-auto max-w-6xl px-4 relative z-10">
+        <h2 class="mb-12 text-center text-3xl font-bold text-[#0B2C4D]">
+          Per a qui és INVOICEOFF?
+        </h2>
+        <div class="grid gap-8 md:grid-cols-3">
+          <!-- Autònoms -->
+          <div class="text-center">
+            <h3 class="mb-4 text-xl font-semibold text-[#0B2C4D]">Autònoms</h3>
+            <p class="text-gray-600">
+              Simplifica la gestió de les teves factures i centra't en fer créixer el teu negoci
+            </p>
+          </div>
+          <!-- Gestors -->
+          <div class="text-center">
+            <h3 class="mb-4 text-xl font-semibold text-[#0B2C4D]">Gestors</h3>
+            <p class="text-gray-600">
+              Optimitza el temps de processament de factures dels teus clients
+            </p>
+          </div>
+          <!-- Empreses -->
+          <div class="text-center">
+            <h3 class="mb-4 text-xl font-semibold text-[#0B2C4D]">Empreses</h3>
+            <p class="text-gray-600">
+              Automotitza la gestió de factures i millora l'eficiència del teu departament comptable
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="relative bg-white py-20 text-[#0B2C4D] overflow-hidden">
+      <div class="absolute inset-0">
+        <div class="absolute -left-20 -top-20 h-60 w-60 rounded-full bg-blue-400/5"></div>
+        <div class="absolute -right-40 bottom-0 h-80 w-80 rounded-full bg-blue-400/5"></div>
+      </div>
+      <div class="container mx-auto max-w-6xl px-4 text-center relative z-10">
+        <h2 class="mb-8 text-3xl font-bold">
+          Prepara't per simplificar la gestió de les teves factures?
+        </h2>
+        <button class="bg-[#0B2C4D] text-white px-6 py-3 rounded-lg text-lg hover:bg-[#0B2C4D]/90 transition-colors">
+          Comença a utilitzar INVOICEOFF
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+
+</html>
