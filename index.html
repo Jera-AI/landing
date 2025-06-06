@@ -1,62 +1,177 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>InvoiceOff</title>
-  <!-- Tailwind CSS via CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Si quieres personalizar Tailwind, podrías añadir un bloque de configuración aquí -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InvoiceOff - Gestión de Facturas Inteligente</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        .cta-gradient {
+            background: linear-gradient(to bottom, #0B2C4D, #1E40AF);
+        }
+        .hero-gradient {
+            background: linear-gradient(to bottom, #0B2C4D, #1E3A8A);
+        }
+    </style>
 </head>
-
-<body class="bg-gray-50">
-
-  <main class="min-h-screen overflow-hidden">
-
+<body class="bg-white">
     <!-- Hero Section -->
-    <section class="relative flex min-h-[90vh] items-center bg-[#0B2C4D] px-4 text-white">
-      <!-- Círculos decorativos -->
-      <div class="absolute inset-0 overflow-hidden">
-        <div class="absolute -left-40 -top-40 h-80 w-80 rounded-full bg-blue-400/10"></div>
-        <div class="absolute -right-20 top-1/2 h-60 w-60 rounded-full bg-blue-400/10"></div>
-        <div class="absolute bottom-20 left-1/3 h-40 w-40 rounded-full bg-blue-400/10"></div>
-      </div>
-      <!-- Imagen de fondo semitransparente -->
-      <div class="absolute inset-0 overflow-hidden opacity-40">
-      </div>
-
-      <div class="container mx-auto grid max-w-6xl gap-8 md:grid-cols-2 relative z-10">
-        <!-- Logo y texto -->
-        <div class="flex flex-col items-center justify-center text-center md:items-start md:text-left">
-          <div class="mb-1">
-            <img src="images/logo_incoiveoff.png" width="300" height="100" alt="InvoiceOff Logo"
-              class="mx-auto md:mx-0" />
-          </div>
-          <p class="text-xl">
-            Gestiona tus facturas de manera inteligente
-          </p>
+    <section class="hero-gradient min-h-screen flex items-center py-20">
+        <div class="container mx-auto px-3">
+            <div class="grid md:grid-cols-5 gap-12 items-center">
+                <div class="flex flex-col items-center justify-center h-full max-w-2xl mx-auto md:col-span-3">
+                    <img src="images/logo_incoiveoff.png" alt="InvoiceOff Logo" class="w-64 mb-5">
+                    <h1 class="text-4xl md:text-5xl font-bold text-white leading-tight mb-6 text-center w-full">La forma más fácil de gestionar tus facturas</h1>
+                    <p class="text-xl text-blue-100 mb-8 text-center w-full">Con Invoiceoff, gestionar tus facturas nunca ha sido tan sencillo. Olvídate del papeleo y organiza tus ingresos y gastos en un momento.</p>
+                    <div class="flex flex-wrap gap-4 justify-center">
+                        <a href="#" class="bg-white text-blue-600 px-6 py-3 rounded-lg flex items-center space-x-2 hover:bg-blue-50 transition-colors">
+                            <span class="material-icons">apple</span>
+                            <span>App Store</span>
+                        </a>
+                        <a href="#" class="bg-white text-blue-600 px-6 py-3 rounded-lg flex items-center space-x-2 hover:bg-blue-50 transition-colors">
+                            <span class="material-icons">android</span>
+                            <span>Google Play</span>
+                        </a>
+                        <a href="#" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">Formato Web</a>
+                    </div>
+                </div>
+                <div class="hidden md:block md:col-span-2">
+                    <img src="images/landing1.png" alt="InvoiceOff App Demo" class="w-full h-[70vh] object-contain">
+                </div>
+            </div>
         </div>
-        <!-- Formulario de contacto -->
-        <div class="hidden md:block">
-          <!-- Aquí sustituimos el componente ContactForm de React por un formulario estático -->
-          <form action="#" method="POST" class="bg-white p-6 rounded-lg shadow-md">
-            <h3 class="mb-4 text-2xl font-semibold text-[#0B2C4D] text-center">Contacta’ns</h3>
-            <div class="mb-4">
-              <label for="name" class="block text-gray-700 mb-2">Nom</label>
-              <input type="text" id="name" name="name" required
-                class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#0B2C4D]" />
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-white" id="features">
+        <div class="container mx-auto px-3">
+            <h2 class="text-4xl font-bold text-center mb-4 text-slate-800">¿Qué hace <span class="text-blue-600">Invoiceoff</span>?</h2>
+            <p class="text-xl text-center text-slate-600 mb-16 max-w-2xl mx-auto">Descubre cómo nuestra aplicación simplifica la gestión de tus facturas y te ahorra tiempo valioso.</p>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-slate-100 p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
+                    <span class="material-icons feature-icon text-blue-600 mb-4">document_scanner</span>
+                    <h3 class="text-2xl font-semibold mb-3 text-slate-800">Escaneo Inteligente</h3>
+                    <p class="text-slate-600 leading-relaxed">Captura tus facturas con la cámara de tu móvil. Nuestra IA extrae los datos automáticamente.</p>
+                </div>
+                <div class="bg-slate-100 p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
+                    <span class="material-icons feature-icon text-blue-600 mb-4">cloud_upload</span>
+                    <h3 class="text-2xl font-semibold mb-3 text-slate-800">Registro Fácil</h3>
+                    <p class="text-slate-600 leading-relaxed">Organiza tus facturas digitalmente. Accede a ellas desde cualquier lugar y en cualquier momento.</p>
+                </div>
+                <div class="bg-slate-100 p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
+                    <span class="material-icons feature-icon text-blue-600 mb-4">insights</span>
+                    <h3 class="text-2xl font-semibold mb-3 text-slate-800">Informes Claros</h3>
+                    <p class="text-slate-600 leading-relaxed">Visualiza tus gastos y gestiona tu contabilidad con informes detallados y fáciles de entender.</p>
+                </div>
             </div>
-            <div class="mb-4">
-              <label for="email" class="block text-gray-700 mb-2">Correu electrònic</label>
-              <input type="email" id="email" name="email" required
-                class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#0B2C4D]" />
+        </div>
+    </section>
+
+    <!-- How it Works Section -->
+    <section class="py-20 bg-slate-50" id="how-it-works">
+        <div class="container mx-auto px-3">
+            <h2 class="text-4xl font-bold text-center mb-16 text-slate-800">Tan fácil como <span class="text-blue-600">1, 2, 3</span></h2>
+            <div class="flex flex-col md:flex-row items-center justify-around space-y-10 md:space-y-0 md:space-x-10">
+                <div class="flex-1 text-center">
+                    <div class="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 shadow-md">1</div>
+                    <h3 class="text-xl font-semibold mb-2 text-slate-700">Captura</h3>
+                    <p class="text-slate-600">Abre la app y escanea tu factura con la cámara.</p>
+                    <img src="images/landing4.png" alt="Ilustración del paso 1: Captura de factura" class="mt-6 mx-auto rounded-lg shadow-md w-full max-w-xs" />
+                </div>
+                <div class="text-slate-300 text-4xl hidden md:block">→</div>
+                <div class="flex-1 text-center">
+                    <div class="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 shadow-md">2</div>
+                    <h3 class="text-xl font-semibold mb-2 text-slate-700">Verifica</h3>
+                    <p class="text-slate-600">Nuestra IA extrae los datos. Revisa y confirma.</p>
+                    <img src="images/landing3.png" alt="Ilustración del paso 2: Verificación de datos" class="mt-6 mx-auto rounded-lg shadow-md w-full max-w-xs" />
+                </div>
+                <div class="text-slate-300 text-4xl hidden md:block">→</div>
+                <div class="flex-1 text-center">
+                    <div class="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 shadow-md">3</div>
+                    <h3 class="text-xl font-semibold mb-2 text-slate-700">Guarda</h3>
+                    <p class="text-slate-600">¡Listo! Tu factura está registrada y organizada.</p>
+                    <img src="images/landing6.png" alt="Ilustración del paso 3: Factura guardada" class="mt-6 mx-auto rounded-lg shadow-md w-full max-w-xs" />
+                </div>
             </div>
-            <div class="mb-4">
-              <label for="message" class="block text-gray-700 mb-2">Missatge</label>
-              <textarea id="message" name="message" rows="4" required
-                class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#0B2C4D]"></textarea>
+        </div>
+    </section>
+
+    <!-- Target Audience Section -->
+    <section class="py-20 bg-white" id="target-audience">
+        <div class="container mx-auto px-3">
+            <h2 class="text-4xl font-bold text-center mb-4 text-slate-800">Hecho para <span class="text-blue-600">ti</span></h2>
+            <p class="text-xl text-center text-slate-600 mb-16 max-w-2xl mx-auto">Si manejas facturas regularmente, Invoiceoff es tu aliado perfecto para simplificar tu vida.</p>
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <div>
+                    <img src="images/landing2.png" alt="Personas sonriendo usando la aplicación Invoiceoff en sus dispositivos" class="rounded-xl shadow-lg w-full" />
+                </div>
+                <div class="space-y-8">
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-blue-100 text-blue-600 p-3 rounded-full">
+                            <span class="material-icons">business_center</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-slate-800">Autónomos y Freelancers</h3>
+                            <p class="text-slate-600 mt-1">Lleva un control impecable de tus gastos e ingresos. Simplifica tu declaración de impuestos.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-blue-100 text-blue-600 p-3 rounded-full">
+                            <span class="material-icons">storefront</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-slate-800">Pequeñas Empresas</h3>
+                            <p class="text-slate-600 mt-1">Optimiza la gestión de facturas de proveedores y clientes. Mejora el flujo de caja.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-blue-100 text-blue-600 p-3 rounded-full">
+                            <span class="material-icons">person</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-slate-800">Cualquier Persona Organizada</h3>
+                            <p class="text-slate-600 mt-1">Si te gusta tener tus finanzas personales en orden, Invoiceoff te ayuda a no perder ningún detalle.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-gradient py-20 text-white" id="cta">
+        <div class="container mx-auto px-3 text-center">
+            <h2 class="text-4xl font-bold mb-6">¿Listo para simplificar tus facturas?</h2>
+            <p class="text-xl mb-10 max-w-xl mx-auto text-blue-100">Descarga Invoiceoff hoy mismo y empieza a disfrutar de una gestión de facturas sin estrés.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#" class="bg-white text-blue-600 px-6 py-3 rounded-lg flex items-center space-x-2 hover:bg-blue-50 transition-colors">
+                    <span class="material-icons">apple</span>
+                    <span>App Store</span>
+                </a>
+                <a href="#" class="bg-white text-blue-600 px-6 py-3 rounded-lg flex items-center space-x-2 hover:bg-blue-50 transition-colors">
+                    <span class="material-icons">android</span>
+                    <span>Google Play</span>
+                </a>
+                <a href="#" class="bg-blue-600 text-white border border-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">Formato Web</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-slate-300 py-12">
+        <div class="container mx-auto px-3 text-center">
+            <div class="text-xl font-bold text-blue-500 mb-4">Invoice<span class="text-blue-300">off</span></div>
+            <p class="mb-6">© 2024 Invoiceoff. Todos los derechos reservados.</p>
+            <div class="space-x-6">
+                <a class="hover:text-blue-400 transition-colors" href="#">Política de Privacidad</a>
+                <a class="hover:text-blue-400 transition-colors" href="#">Términos de Servicio</a>
+                <a class="hover:text-blue-400 transition-colors" href="#">Contacto</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
             <button type="submit"
               class="w-full bg-[#0B2C4D] text-white py-2 rounded hover:bg-[#0B2C4D]/90 transition-colors">
               Enviar
